@@ -11,11 +11,10 @@
 <div class="container">
     <header class="d-flex justify-content-center py-3">
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="<?= URLROOT ?>/index" class="nav-link active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="<?= URLROOT ?>/about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="<?= URLROOT ?>/admin/index" class="nav-link">Admin index</a></li>
+        <li class="nav-item"><a href="<?= URLROOT ?>/admin/about" class="nav-link">Admin Abput</a></li>
       </ul>
     </header>
   </div>

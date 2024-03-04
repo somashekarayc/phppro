@@ -1,7 +1,18 @@
 <?php
 define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__.'/config.php');
+require_once(__ROOT__ . '/config.php');
+
+// Define the base URL
+$base_url = URLROOT;
+
+// Function to check if a given URL is active
+function is_active($url)
+{
+$current_url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+  return($url === $current_url) ? 'active' : '';
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,10 +27,15 @@ require_once(__ROOT__.'/config.php');
   <div class="container">
     <header class="d-flex justify-content-center py-3">
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="<?= URLROOT ?>/index" class="nav-link active" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="<?= URLROOT ?>/about" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="<?= URLROOT ?>/admin/index" class="nav-link">Admin index</a></li>
-        <li class="nav-item"><a href="<?= URLROOT ?>/admin/about" class="nav-link">Admin Abput</a></li>
+        <li class="nav-item"><a href="<?= $base_url ?>/index" class="nav-link <?= is_active("$base_url/index") ?>" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="<?= $base_url ?>/about" class="nav-link <?= is_active("$base_url/about") ?>">About</a></li>
+        <li class="nav-item"><a href="<?= $base_url ?>/admin/index" class="nav-link <?= is_active("$base_url/admin/index") ?>">Admin index</a></li>
+        <li class="nav-item"><a href="<?= $base_url ?>/admin/about" class="nav-link <?= is_active("$base_url/admin/about") ?>">Admin About</a></li>
       </ul>
     </header>
+  </div>
+
+  <div>
+    <?php echo $_SERVER['REQUEST_URI']; ?>
+    <?php echo $base_url; ?>
   </div>

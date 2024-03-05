@@ -1,6 +1,5 @@
 <?php
-define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__ . '/config.php');
+require_once(__DIR__ . '/../config.php');
 
 // Define the base URL
 $baseUrl = URLROOT;
@@ -33,4 +32,8 @@ $currentUrl = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
         <li class="nav-item"><a href="<?= $baseUrl ?>/admin/about" class="nav-link <?= isActive("$baseUrl/admin/about") ?>">Admin About</a></li>
       </ul>
     </header>
+  </div>
+
+  <div class="container">
+    <?= dirname(__FILE__) ?>
   </div>

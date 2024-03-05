@@ -1,4 +1,5 @@
 <?= require_once '../layouts/header.php' ?>
+<main>
 <div class="container">
 <table class="table">
   <thead>
@@ -30,4 +31,5 @@
   </tbody>
 </table>
 </div>
+</main>
 <?= require_once '../layouts/footer.php' ?>

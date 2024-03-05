@@ -33,7 +33,3 @@ $currentUrl = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
       </ul>
     </header>
   </div>
-
-  <div class="container">
-    <?= dirname(__FILE__) ?>
-  </div>

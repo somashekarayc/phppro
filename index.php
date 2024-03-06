@@ -36,8 +36,8 @@
 </main>
 
 <div class="container">
-  <button type="button" class="btn btn-sm btn-primary btn-icon m-1 getclienee" data-bs-toggle="modal" data-bs-target="#exampleModal" data-url="model/index_modal.php" data-size="lg" data-bs-whatever="Create New Index data"> <span class="text-white">
-      <i class="ti ti-plus text-white" data-bs-toggle="tooltip" data-bs-original-title="Create"></i></span>
+  <button type="button" class="btn btn-sm btn-primary btn-icon m-1 getclienee" data-bs-toggle="modal" data-bs-target="#exampleModal" data-url="model/index_modal.php" data-size="lg" data-bs-whatever="Create New Index data"> 
+    <span class="text-white"> <i class="ti ti-plus text-white" data-bs-toggle="tooltip" data-bs-original-title="Create"></i> Open Modal </span>
   </button>
 </div>
 

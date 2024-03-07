@@ -2,7 +2,7 @@
 require_once(__DIR__ . '/../config.php');
 
 // Define the base URL
-$baseUrl = URLROOT;
+$baseUrl = $_ENV['APP_URL'];
 
 // Function to check if a given URL is active
 function isActive($url)

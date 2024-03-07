@@ -1,10 +1,7 @@
 <?php
 require_once(__DIR__ . '/../config.php');
 
-// Define the base URL
 $baseUrl = $_ENV['APP_URL'];
-
-// Function to check if a given URL is active
 function isActive($url)
 {
 $currentUrl = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
@@ -22,14 +19,21 @@ $currentUrl = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<style>
+  *{
+  background-color: black;
+  color: white;
+  }
+</style>
+
+<body class="bg-black text-white">
   <div class="container">
     <header class="d-flex justify-content-center py-3">
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="<?= $_ENV['APP_URL'] ?>/index" class="nav-link <?= isActive("$baseUrl/index") ?>" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="<?= $_ENV['APP_URL'] ?>/about" class="nav-link <?= isActive("$baseUrl/about") ?>">About</a></li>
-        <li class="nav-item"><a href="<?= $_ENV['APP_URL'] ?>/admin/index" class="nav-link <?= isActive("$baseUrl/admin/index") ?>">Admin index</a></li>
-        <li class="nav-item"><a href="<?= $_ENV['APP_URL'] ?>/admin/about" class="nav-link <?= isActive("$baseUrl/admin/about") ?>">Admin About</a></li>
+        <li class="nav-item"><a href="<?= view('index') ?>" class="nav-link <?= isActive("$baseUrl/index") ?>" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="<?= view('about') ?>" class="nav-link <?= isActive("$baseUrl/about") ?>">About</a></li>
+        <li class="nav-item"><a href="<?= view('admin/index') ?>" class="nav-link <?= isActive("$baseUrl/admin/index") ?>">Admin index</a></li>
+        <li class="nav-item"><a href="<?= view('admin/about') ?>" class="nav-link <?= isActive("$baseUrl/admin/about") ?>">Admin About</a></li>
       </ul>
     </header>
   </div>
